@@ -38,15 +38,15 @@ body::after {
     clip-path: circle(40% at 100% 80%);
 }
 
-.calc-body {
+.app {
     z-index: 10;
     display: grid;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    -webkit-backdrop-filter: blur(1.25rem);
     backdrop-filter: blur(1.25rem);
+    -webkit-backdrop-filter: blur(1.25rem);
     border-radius: 2rem;
     width: 25vw;
-    height: 80vh;
+    height: 100vh;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(8,1fr);
     grid-template-areas: 
@@ -66,6 +66,8 @@ div div:not(.output) {
     display: grid;
     justify-items: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 div div span {
@@ -80,6 +82,7 @@ div div span {
     cursor: pointer;
     transition: all 0.3s;
     font-size: 1.1rem;
+    padding: 1.0275rem 0.34rem;
 }
 
 .numkey:hover {

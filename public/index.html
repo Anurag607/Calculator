@@ -8,15 +8,14 @@
     <meta name="author" content="Deep">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel = "stylesheet" href = "style.css" type = "text/css">
-    <script src = "script.js" type = "text/javascript"></script>
     <script src = "Tilt.js" type = "text/javascript"></script>
     <title>Calculator</title>
 </head>
 <body>
-    <div class="calc-body"></div>
+    <div class="calc-body" data-tilt data-tilt-reverse="true"></div>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".calc-body"), {
-            max: 15,
+            max: 7.5,
             speed: 500,
         });
     </script>
