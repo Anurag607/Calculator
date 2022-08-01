@@ -21,12 +21,6 @@ function Numkeys() {
   )
 }
 
-// function Binary(props) {
-//   return (
-//     <span className= "binarykey">{props.operator}</span>
-//   );
-// }
-
 function App() {
   return (
     <div className="app">
