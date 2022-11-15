@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background: #091921;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#e91e63,#ffc107);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(42% at 0% 20%);
+}
+
+body::after {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#e8e8e8,#da00ff);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: circle(40% at 100% 80%);
+}
+
+.calc-body {
+    z-index: 10;
+    display: grid;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(1.25rem);
+    backdrop-filter: blur(1.25rem);
+    /* box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.37); */
+    border-radius: 2rem;
+    width: 25vw;
+    height: 80vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-template-areas: 
+        '1 1 1 1'
+        '1 1 1 1'
+        '1 1 1 1'
+        '2 2 2 2'
+        '3 3 3 4'
+        '3 3 3 4'
+        '3 3 3 4'
+        '3 3 3 4';
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+div div:not(.output) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+div div span {
+    /* background: #36454f; */
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    color: #e8e8e8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+}
+
+div div span:hover {
+    background: var(--bg);
+}
+
+.output {
+    grid-area: 1;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 3;
+    position: relative;
+}
+
+.b1 {
+    grid-area: 2;
+    grid-column: 1 / span 4;
+    grid-row: 4;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.keypad {
+    grid-area: 3;
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 4;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.b2 {
+    grid-area: 4;
+    grid-column: 4;
+    grid-row: 5 / span 4;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.screen {
+    font-size: 2rem;
+    color: #e8e8e8;
+    text-align: right;
+    cursor: default;
+    position: absolute;
+    height: 2.8rem;
+    width: auto;
+    bottom: 5%;
+    right: 5%;
+}
